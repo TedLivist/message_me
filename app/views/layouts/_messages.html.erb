@@ -1,0 +1,12 @@
+<% flash.each do |message_type, message_content| %>
+  <% if message_type == "success" %>
+    <div class="ui success message">
+  <% elsif message_type == "error" %>
+    <div class="ui error message">
+  <% end %>
+    <i class="close icon"></i>
+    <div class="header">
+      <%= message_content %>
+    </div>
+  </div>
+<% end %>
